@@ -33,18 +33,6 @@ class FeeCalculatorTest {
         assertThat(actualFee).isEqualTo(50.0);
     }
 
-    @Test
-    public void for_age_under_14_WEEK_should_calculate_EXCEPTION()
-    {
-        //GIVEN
-        Visitor child = new Visitor(10);
-
-        //WHEN
-        double actualFee = FeeCalculator.calculateFee(child, TicketType.FULL_DAY);
-
-        //THEN
-        assertThat(actualFee).isEqualTo(50.0);
-    }
 
     @Test
     public void should_throw_exception_when_ticketType_not_supported_for_age_under_14()
